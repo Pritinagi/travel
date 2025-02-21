@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-text">
+            <h2>Join Our Community</h2>
+            <p>Create your account and start exploring.</p>
+        </div>
+        <div class="login-card">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                {{ error }}
+                </div>
+            {% endif %}
+            {% comment %} This code checks if there's an error and displays it in a simple alert box. If there's no error, nothing is displayed. {% endcomment %}
+            <h2>Signup</h2>
+            <form id="signupForm" action="/register" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Full Name" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                {% comment %} <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div> {% endcomment %}
+                <button type="submit" class="btn btn-primary">Signup</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/register.js">
+        {% comment %} alert("registration success") {% endcomment %}
+    </script>
+</body>
+</html>

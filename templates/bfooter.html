@@ -1,0 +1,552 @@
+<!-- 
+{% comment %} template inheritance
+this page will be shown to all the pages connected 
+ {% endcomment %} -->
+ 
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>
+         {% block title %} {% endblock title %}
+         Travelling
+     </title>
+     <!-- bootstrap css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+ </head>
+ 
+ <body>
+     <nav class="navbar fixed-top bg-white mb-3">
+         <div class="container-fluid">
+             <a class="navbar-brand" href="#">Traveelooo</a>
+             <form class="d-flex mt-3" role="search">
+                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-success" type="submit">Search</button>
+             </form>
+             <ul class="nav justify-content-end">
+                 <li class="nav-item">
+                     <a class="nav-link" href="/home">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link " href="/blog">Blog</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/destination">Destinations</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/about">About</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/contact">Contact</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                         aria-expanded="false">
+                         Login/Logout
+                     </a>
+                     <ul class="dropdown-menu ">
+                         <li><a class="dropdown-item" href="/login">Login</a></li>
+                         <li><a class="dropdown-item" href="/login">Logout</a></li>
+                         <li><a class="dropdown-item" href="/register">Register</a></li>
+                     </ul>
+                 </li>
+             </ul>
+             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                 <img src="static/image/cart.png" alt="" class="navbar ">
+             </button>
+             <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"
+                 aria-labelledby="offcanvasNavbarLabel">
+                 <div class="offcanvas-header">
+                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Cart</h5>
+                     <button type="button" class="btn-close btn-close-black p-0" data-bs-dismiss="offcanvas"
+                         aria-label="Close"></button>
+                 </div>
+                 <div class="offcanvas-body">
+                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                         <li class="nav-item">
+                             <a class="nav-link active" aria-current="page" href="#">Item 1</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="#">Item 2</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menubar"
+                 aria-controls="menubar" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="offcanvas offcanvas-end " tabindex="-1" id="menubar" aria-labelledby="menubarLabel">
+                 <div class="offcanvas-header">
+                     <h5 class="offcanvas-title" id="menubarLabel">Travel Bar</h5>
+                     <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                         aria-label="Close"></button>
+                 </div>
+                 <div class="offcanvas-body">
+                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                         <li class="nav-item">
+                             <a class="nav-link active" aria-current="page" href="#">home</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="/contact">Contact</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </nav>
+ 
+ 
+ <!-- {% comment %} body ka content jo ki the connected template mai se ayega {% endcomment %} -->
+ {% block body %}
+ 
+ 
+ {% endblock body %}
+
+  <!-- {% comment %} <div class="container-fluid mt-3">
+
+    <div class="">
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="180" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+    </div>
+    <div class="">
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+          type="video/mp4">
+      </video>
+      <video width="200" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+      <video width="180" height="540" autoplay loop muted class="img-fluid">
+        <source
+          src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+          type="video/mp4">
+      </video>
+    </div>
+
+  </div> {% endcomment %} -->
+
+  <!-- secion - 3 -->
+  <div class="mb-5 mt-3">
+    <h2 class="display-5 my-4 text-primary">Gallery</h2>
+    <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0"
+      aria-valuemax="100" style="height: 1px">
+      <div class="progress-bar" style="width: 27%"></div>
+    </div>
+  </div>
+  <div class="container-fluid mt-3">
+    <div class="col-12 text-center">
+      <img src="https://www.india.com/wp-content/uploads/2024/08/jang.jpg" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSFoRuJA6ed1KeamBy8LrFIbGiz5c9URPnA&s" alt="" height="120">
+      <img src="https://media.istockphoto.com/id/1218830644/photo/beautiful-lake.jpg?s=612x612&w=0&k=20&c=r5or5KmtrZE5P93cDPG2FzxWQxhZA0qeTInoXJ7qXxA=" alt="" height="120">
+      <img src="https://imgmediagumlet.lbb.in/media/2021/01/5ffff9478f18d85c00c01a8e_1610611015609.jpg" alt="" height="120">
+      <img src="https://www.indiantempletour.com/wp-content/uploads/2023/03/Tawang-Tour-Package.jpg" alt="" height="120">
+      <img src="https://images.unsplash.com/photo-1712265029028-c15fadef3d37?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwdHJhdmVsfGVufDB8fDB8fHww" alt="" height="120">
+      <img src="https://www.india.com/wp-content/uploads/2024/08/jang.jpg" alt="" height="120">
+    </div>
+    <div class="col-12 text-center mt-1">
+
+      <img src="https://images.unsplash.com/photo-1682547094948-1d764fc412ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" height="120">
+      <img src="https://img.pikbest.com/origin/09/21/67/527pIkbEsTxUT.jpg!w700wp" alt="" height="120">
+      <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120">
+      <img src="https://images.unsplash.com/photo-1665126919517-ebd142174fdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8OTAzMjA1Nnx8ZW58MHx8fHx8" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy_JqK6vyE_E5coqA1yke_1ZaC6x3TvwHEQ&s" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosWoYtRJKPjbjXIsD8e9YpuvAppQ8mil4_A&s" alt="" height="120">
+      {% comment %} <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120"> {% endcomment %}
+    </div>
+    <div class="col-12 text-center mt-1">
+
+      <img src="" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz5mfILI2P4EksVNWJjyiQtmFzEdujDgHT0g&s       " alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt22c2lC6eYV-jYe2hG8MO32yqbYEHWMs7Q&s" alt="" height="120">
+      <img src="https://media.istockphoto.com/id/1310906987/photo/waiting-when-owner-deliver-them-to-upper-point-on-river-beas-n-they-hold-them-to-top-of-car.webp?a=1&b=1&s=612x612&w=0&k=20&c=MNxjqVvpkH3phSo86dKhJ2vo3VCsDYBqloJSnyVpbbk=" alt="" height="120">
+      <img src="https://images.pexels.com/photos/13993407/pexels-photo-13993407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmYHbUpsp2LBZRAfBCuPSD71T55YFFWl56ZQ&s" alt="" height="120">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4PsgFBwTXgBz7avzQG532q6jG0aHOhnsKvw&s" alt="" height="120">
+    </div>
+
+  </div>
+  <!-- section 4 -->
+  <div class="mb-5 mt-3">
+    <h2 class="display-5 my-4 text-primary">Recommendations</h2>
+    <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0"
+      aria-valuemax="100" style="height: 1px">
+      <div class="progress-bar" style="width: 37%"></div>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1690566353811-a2fe3a8be4c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlJTIwYmx1ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Sikkim" class="card-img-top " height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Jaipur</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Kutch</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlJTIwcHVycGxlfGVufDB8fDB8fHwy"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">varanasi</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Manali</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Jammu</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Shimla</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1690566353811-a2fe3a8be4c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlJTIwYmx1ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Rajasthan</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Assam</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlJTIwcHVycGxlfGVufDB8fDB8fHwy"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Goa</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Ooty</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Darjleeng</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Rishikesh</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1690566353811-a2fe3a8be4c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlJTIwYmx1ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Delhi</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Udaipur</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Gulmarg</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Srinagar</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Amritsar</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Shillong</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1690566353811-a2fe3a8be4c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlJTIwYmx1ZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Munnar</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Ladakh</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Coorg</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Kashmir</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Nanital</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+            alt="Sikkim" class="card-img-top" height="200px">
+          <div class="card-body my-0 py-0">
+            <h4 class="card-title">Jodpur</h4>
+            <p class="card-subtitle  text-muted">6 days 5 night</p>
+            <p class="card-text mb-1">price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+     <!-- bootstrap js  -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+         crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/your_fontawesome_kit.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/your_fontawesome_kit.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+ </body>
+ </body>
+ 
+ </html>
+   

@@ -1,0 +1,418 @@
+{% extends "base.html" %}
+{% block title %}Contact for {% endblock title %}
+{% block body %}
+{% comment %} This is body here all the detais of the page will be written {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-carousel {
+            position: sticky;
+            top: 0;
+        }
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .price-section .badge {
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+        .btn-group button {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid py-5 mt-4">
+    <div class="row">
+        <!-- Left Section: Product Carousel -->
+        <div class="col-md-4 product-carousel">
+          <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.jpg?s=612x612&w=0&k=20&c=HvhbHZ8HH_lAjAAI2pmqL4mUipyyAwy31qp5jjKQTO0= " alt="Product Image 2" class="img-fluid" >
+              </div>
+              <div class="carousel-item">
+                
+                <img src="https://media.istockphoto.com/id/511119416/photo/indian-landmark-gadi-sagar-in-rajasthan.jpg?s=612x612&w=0&k=20&c=dO7TbXh3sd6_QmgcF_nYi6ynyIAvPI5STavwzCDyWTI=" alt="Product Image 4" class="img-fluid">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="col-md-12 py-2  "> 
+            <video width="400" height="540" autoplay loop muted class="img-fluid"> 
+              <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+            </video>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6 pe-1"> 
+              <img src="https://s3.india.com/wp-content/uploads/2024/05/Sisodia-Rani-Garden-1.jpg" alt="..." class="img-fluid">
+            </div>
+            <div class="col-md-6 ps-1">
+              <img src="https://static.toiimg.com/thumb/111461674/9-places-to-visit-in-Rajasthan-during-monsoon.jpg?width=1200&height=900" alt="..." class="img-fluid">
+            </div>
+            <div class="col-md-12 py-2  "> 
+              <video width="400" height="540" autoplay loop muted class="img-fluid"> 
+                <source src="https://media.istockphoto.com/id/2164103170/video/woman-on-camel-in-the-desert-at-sunset.mp4?s=mp4-640x640-is&k=20&c=A_hv1rxOOqzwZBcUSTYlXJi95IzlEiRonEIViUpqHcM=" type="video/mp4">
+              </video>
+            </div>
+            
+          </div>
+
+          {% comment %} <div class="row mt-2">
+            <div class="col-md-6 pe-1">
+              <img src="https://s3.india.com/wp-content/uploads/2024/05/Sisodia-Rani-Garden-1.jpg" alt="Additional Product Image 1" class="img-fluid">
+            </div>
+            <div class="col-md-6 ps-1">
+              <img src="https://static.toiimg.com/thumb/111461674/9-places-to-visit-in-Rajasthan-during-monsoon.jpg?width=1200&height=900" alt="Additional Product Image 2" class="img-fluid">
+            </div>
+            <div>
+              <video width="380" height="540" autoplay loop muted class="mt-0" >
+                <source src="https://media.istockphoto.com/id/2164103170/video/woman-on-camel-in-the-desert-at-sunset.mp4?s=mp4-640x640-is&k=20&c=A_hv1rxOOqzwZBcUSTYlXJi95IzlEiRonEIViUpqHcM=" type="video/mp4">
+                
+              </video>
+            </div>
+          </div> {% endcomment %}
+
+          
+          
+         
+        </div>
+
+        <!-- Right Section: Product Details -->
+        <div class="col-md-8">
+            <!-- Product Name -->
+            <h1 class="fw-bold">Rajasthan... </h1>
+
+            <!-- Pricing -->
+            <div class="price-section my-3">
+                <p class="h4">
+                    <del class="text-muted">₹5999</del>
+                    <span class="text-danger">₹200</span>
+                    <span class="badge bg-success">Save 3.33%</span>
+                </p>
+                
+            </div>
+
+            <!-- Interactive Buttons -->
+            <div class="d-flex my-3">
+              <button class="btn btn-primary me-2">Add to Bag</button>
+              <button class="btn btn-outline-secondary">Wishlist</button>
+          </div>
+
+            <!-- Size Selection -->
+            <div class="my-3">
+              <div class="row">
+                <div class="col-md-6"> 
+                  <label for="sizeSelect1" class="form-label">Select Duration </label>
+                  <select id="sizeSelect1" class="form-select">
+                    <option value="1">2 Days</option>
+                    <option value="2">4 Days</option>
+                    <option value="3">10 Days</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="sizeSelect2" class="form-label">Select Dates</label>
+                  <div>idhr calender add krne ka hai</div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              
+
+            <!-- Seller Information -->
+            <div class="my-3">
+                <p><strong>Seller:</strong> Package for 1 person only</p>
+            </div>
+
+            <!-- Delivery Options -->
+          <div class="my-3">
+              <h2 class="fw-bold">Traveling Details</h2>
+              <ul class="list-group">
+                  <li class="list-group-item">Choice of the user to fix the date.</li>
+                  {% comment %} <li class="list-group-item">Only 2 days can be selected.</li> {% endcomment %}
+                  <li class="list-group-item">Extra charges will be added for more than 2 days.</li>
+                  <li class="list-group-item">For 2 days, the price is ₹5999.</li>
+                  <li class="list-group-item">Prices will increase or decrease accordingly.</li>
+              </ul>
+              
+          </div>
+              <!-- product descripion -->
+              <div class="my-3">
+                <h2 class="fw-bold">Facilities Details</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Choice of the user to fix the date.</li>
+                    {% comment %} <li class="list-group-item">Only 2 days can be selected.</li> {% endcomment %}
+                    <li class="list-group-item">Extra charges will be added for more than 2 days.</li>
+                    <li class="list-group-item">For 2 days, the price is ₹5999.</li>
+                    <li class="list-group-item">Prices will increase or decrease accordingly.</li>
+                </ul>
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="my-3">
+                <p><em>Enjoy! For other services, contact 1234567654.</em></p>
+            </div>
+
+          
+        </div>
+    </div>
+</div>
+
+ <!-- secion - 2 -->
+ <div class="mb-5 mt-3">
+  <h2 class="display-5 my-4 text-primary">Lets Explore the City</h2>
+  <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+  <div class="progress-bar" style="width: 37%"></div>
+  </div>
+</div>
+<div class="container-fluid mt-3">
+
+  <div class="">
+    <video width="200" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+    </video>
+    <video width="200" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+    </video>
+    <video width="200" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI=" type="video/mp4">
+    </video>
+    <video width="200" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+    </video>
+    
+    <video width="200" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+    </video>
+    <video width="180" height="540" autoplay loop muted class="img-fluid"> 
+      <source src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk=" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+
+ <!-- secion - 3 -->
+ <div class="mb-5 mt-3">
+  <h2 class="display-5 my-4 text-primary">Gallery</h2>
+  <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+  <div class="progress-bar" style="width: 27%"></div>
+  </div>
+</div>
+ <div class="container-fluid mt-3">
+  <div class="col-12 text-center">
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+  </div>
+  <div class="col-12 text-center mt-1">
+    
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+  </div>
+  <div class="col-12 text-center mt-1">
+    
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+    <img src="https://static.toiimg.com/photo/msid-90439488,width-96,height-65.cms" alt="" height="120" >
+  </div>
+
+</div>
+
+<!-- Reviews  -->
+<section class="text-gray-600 body-font ">
+  <div class="container p-1 mt-5 mb-3">
+    <div class="mb-5 mt-3">
+      <h2 class="display-5 my-4 text-primary text-center">Customer's Review</h2>
+      <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+      <div class="progress-bar" style="width: 27%"></div>
+      </div>
+    </div>
+    <!-- <div class="text-center mb-5">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">CUSTOMER REVIEW'S</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Use A Service Like Trustpilot To Collect Feedback
+      </p>
+    </div> -->
+
+    <div class="row mt-2 pb-4">
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+          <div class="d-flex align-items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+              alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+            <div>
+              <h2 class="h5">Holden Caulfield</h2>
+              <p class="text-muted">visit to MANALI!</p>
+            </div>
+          </div>
+          <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+            advance, booking received, deposit, paid, details of booking, reminder to pay and the
+            user-friendly app</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+{% endblock body %}

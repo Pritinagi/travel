@@ -1,0 +1,687 @@
+{% extends "base.html" %}
+
+{% block title %}destination select krle{% endblock title %}
+{% block body %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Travel</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="static/css/home.css">
+</head>
+
+<body>
+
+
+  <!-- destination slider -->
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src=" https://w0.peakpx.com/wallpaper/364/688/HD-wallpaper-dark-blue-sky-above-snow-covered-mountain.jpg"
+          class="d-block w-100" alt="..." height="570">
+        <div class="carousel-caption d-none d-md-block">
+          <h5> Unforgettable Adventures Await on the Water</h5>
+          <p>Escape the ordinary. Explore the extraordinary</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://s7ap1.scene7.com/is/image/incredibleindia/gateway-of-india-1-tri-hero?qlt=82&ts=1727165509978&wid=800"
+          class="d-block w-100" alt="..." height="570">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Sweet Surrender</h5>
+          <p>Indulge your senses. Delight your soul</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://c4.wallpaperflare.com/wallpaper/575/379/756/5bd2651c0b932-wallpaper-preview.jpg" class="d-block w-100" alt="..." height="570">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Where Sweet Dreams Come True</h5>
+          <p>Where magic and mystique reside.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- 2nd section -->
+
+
+  <section class="fluid-container mt-3">
+    <div class="row mt-4">
+      <div class="col-md-12 text-center mb-4">
+        <h2 class="display-4 text-center  text-primary mb-4">T_R_A_V_E_L_L_I_N_G!!</h2>
+        <p class="lead text-center text-gray-500">Travel places in India</p>
+      </div>
+    </div>
+  </section>
+  <section class="container mx-auto px-5 py-24">
+    <div class="row flex flex-wrap md:flex-nowrap">
+      <div class="col-md-6 mb-md-0 mb-10 order-md-1 order-2 w-full">
+        <img class="img-fluid rounded"
+          src="https://static.euronews.com/articles/stories/05/36/83/90/1440x810_cmsv2_6187d843-7037-5073-92f1-c3a894a93ba2-5368390.jpg"
+          alt="hero">
+      </div>
+      <div class="col-md-6 flex flex-col justify-center items-center order-md-2 order-1">
+        <h3 class="text-3xl font-medium text-gray-900 mb-4 title-font">Traveling opens door to creating memories!!<br
+            class="d-none d-md-block">.....................</h3>
+        <p class="text-gray-700 mb-8 leading-relaxed">A smiling agent for you. Here To Get You There. We will take you
+          anywhere. Get With Us And Get Away. Travel made simple.A smiling agent for you. Here To Get You There. We will
+          take you anywhere. Get With Us And Get Away. Travel made simple.A smiling agent for you. Here To Get You
+          There. We will take you anywhere. Get With Us And Get Away. Travel made simple.</p>
+        <div class="justify-center flex">
+          <button class="btn btn-light ml-4">View more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3rd section -->
+
+
+  <section class="py-5">
+    <div class="fluid-container mt-3">
+      <div class="text-center mb-5">
+        <h2 class="display-4 text-primary">DESTINATIONS!!</h2>
+        <p class="lead">Travel opens our minds and heart and makes us better people.</p>
+      </div>
+      
+      <!-- row 1  -->
+      <div class="row g-4 mt-2">
+        <div class="container">
+          <div class="row">
+            <!-- Card 1:  -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img
+                  src="https://thumbs.dreamstime.com/b/photograph-colorful-sky-over-ocean-evening-image-captured-radhanagar-beach-havelock-island-andaman-nicobar-123281589.jpg"
+                  alt="">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading"> Andaman and Nicobar Islands</div>
+                  <div class="price">Rs - 1600/-</div>
+                  <div class="title">India's Tropical Paradise</div>
+                  <div class="description">Explore pristine beaches, vibrant coral reefs, and lush rainforests in the
+                    Andaman and Nicobar Islands, a breathtaking archipelago in the Bay of Bengal.</div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Red Fort -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img src="https://i.pinimg.com/736x/ea/d1/83/ead183df2e32e27f359500e52bc674ac.jpg" alt="India Gate">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading">Leh-Ladakh:</div>
+                  <div class="price">Rs - 5000/-</div>
+                  <div class="title"> Land of High Passes and Ancient Monasteries</div>
+                  <div class="description">A high-altitude desert region in India known for its stunning landscapes,
+                    ancient monasteries, and adventurous treks.</div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Red Fort -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img
+                  src="https://www.tamilnadutourism.tn.gov.in/img/pages/mobile/mamallapuram-shore-temple-1653384265_2ee80b097acb596596e0.webp"
+                  alt="India Gate">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading">Mahabalipuram</div>
+                  <div class="price">Rs - 7600/-</div>
+                  <div class="title"> Tamil Nadu's Sculpted Coast</div>
+                  <div class="description">
+                    <p>A coastal town in Tamil Nadu renowned for its 7th-century rock-cut temples and sculptures, a
+                      UNESCO World Heritage Site showcasing the brilliance of Pallava art</p>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row 2  -->
+      <div class="row g-4 mt-2">
+        <div class="container">
+          <div class="row">
+            <!-- Card 1:  -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img
+                  src="https://www.tamilnadutourism.tn.gov.in/img/pages/mobile/mamallapuram-shore-temple-1653384265_2ee80b097acb596596e0.webp"
+                  alt="India Gate">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading">Mahabalipuram</div>
+                  <div class="price">Rs - 7600/-</div>
+                  <div class="title"> Tamil Nadu's Sculpted Coast</div>
+                  <div class="description">
+                    <p>A coastal town in Tamil Nadu renowned for its 7th-century rock-cut temples and sculptures, a
+                      UNESCO World Heritage Site showcasing the brilliance of Pallava art</p>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Red Fort -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img src="https://i.pinimg.com/736x/ea/d1/83/ead183df2e32e27f359500e52bc674ac.jpg" alt="India Gate">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading">Leh-Ladakh:</div>
+                  <div class="price">Rs - 5000/-</div>
+                  <div class="title"> Land of High Passes and Ancient Monasteries</div>
+                  <div class="description">A high-altitude desert region in India known for its stunning landscapes,
+                    ancient monasteries, and adventurous treks.</div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Red Fort -->
+            <div class="col-md-4">
+              <div class="landmark-card">
+                <img
+                  src="https://thumbs.dreamstime.com/b/photograph-colorful-sky-over-ocean-evening-image-captured-radhanagar-beach-havelock-island-andaman-nicobar-123281589.jpg"
+                  alt="India Gate">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="heading"> Andaman and Nicobar Islands</div>
+                  <div class="price">Rs - 1600/-</div>
+                  <div class="title">India's Tropical Paradise</div>
+                  <div class="description">Explore pristine beaches, vibrant coral reefs, and lush rainforests in the
+                    Andaman and Nicobar Islands, a breathtaking archipelago in the Bay of Bengal.</div>
+                  <div class="d-flex justify-content-center">
+                    <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                    <a href="login"><button class="btn btn-secondary mr-2">Details</button></a>
+                    <a href="login"><button class="btn btn-outline-primary bi bi-bookmark-heart"></button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Additional cards follow the same structure -->
+
+
+    </div>
+  </section>
+
+
+
+  <!-- 4th section -->
+  <div class="fluid-container mt-3">
+    <div class="text-center mb-5">
+      <h2 class="display-4 text-primary">You Must Visit!!</h2>
+      <p class="lead">Travel opens our minds and heart and makes us better people.</p>
+    </div>
+    <div class="container ">
+      <img src="https://www.indianluxurytrains.com/wp-content/uploads/2014/01/alappuzha-in-kerala-1.jpg"
+        alt="Your Image" class="image">
+      <div class="overlay ">
+
+       <div class="">
+        <h2>A Kaleidoscope of Beauty</h2>
+        <p>
+          Kerala, often called "God's Own Country," is a captivating blend of natural beauty and cultural richness.
+          Verdant landscapes adorned with coconut palms and spice plantations, serene backwaters meandering through
+          picturesque villages, and pristine beaches kissed by the Arabian Sea create a mesmerizing tapestry. Immerse
+          yourself in the tranquility of this southern Indian paradise, explore the vibrant marine life, and indulge in
+          the soulful rhythms of traditional Kathakali dance. Kerala is a haven for those seeking rejuvenation and an
+          unforgettable travel experience.
+        </p>
+        <div class="d-flex justify-content-center">
+          <a href="login"><button class="btn  mr-2">Book</button></a>
+          <a href="login"><button class="btn mr-2">View More</button></a>
+          
+        </div>
+       </div>
+
+      </div>
+
+    </div>
+    <section class="py-5">
+      <div class="container">
+
+        <!-- row 1  -->
+        <div class="row ">
+          <div class="container">
+            <div class="row">
+              <!-- Card 1: Red Fort -->
+              <div class="col">
+                <div class="landmark-card">
+                  <img src="https://www.easemytrip.com/travel/img/sunset-agra.jpg" alt="India Gate">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <div class="heading">Agra</div>
+                    <div class="description">Witnessing a sunset in Agra is an unforgettable experience. As the sun
+                      descends, the Taj Mahal, bathed in warm golden light, appears to shimmer and glow. The sky
+                      transforms into a canvas of vibrant hues, painting a breathtaking picture. The serene atmosphere,
+                      coupled with the majestic Taj Mahal, creates a truly magical moment.</p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <a href="login"><button class="btn btn-primary mr-2">Book</button></a>
+                      <a href="login"><button class="btn btn-secondary mr-2">View More</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2: Red Fort -->
+              <div class="col">
+                <div class="landmark-card">
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/af/f1/8f/luxury-night-view-of.jpg"
+                    alt="India Gate">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <div class="heading">
+                      <h3>Alleppey</h3>
+                    </div>
+                    <div class="description">
+                      <p>Alleppey, the "Venice of the East," is a picturesque district in Kerala, India, famous for its
+                        serene backwaters. Glide through these tranquil waterways on a traditional houseboat, witness
+                        the thrilling Nehru Trophy Boat Race, and relax on pristine beaches. Immerse yourself in the
+                        local culture and indulge in rejuvenating Ayurvedic treatments for an unforgettable experience.
+                      </p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <a href="login"> <button class="btn btn-primary mr-2">Book</button></a>
+                      <a href="login"><button class="btn btn-secondary mr-2">View More</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <!-- 5th section -->
+
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-4">MOSTLY RECOMMENDED PLACES</h1>
+        <hr class="mx-auto" style="width: 100px; height: 3px; background-color: #555;">
+      </div>
+
+      <div class="row">
+
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://m.economictimes.com/thumb/msid-70104165,width-1200,height-900,resizemode-4,imgsize-1445127/jaipur_gettyimages.jpg"
+              alt="Sikkim" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">Jaipur</h2>
+              <h5 class="card-subtitle mb-2 text-muted">6 days 5 night</h5>
+              <p class="card-text">Immerse yourself in the vibrant hues of the Pink City, whispers through ancient walls
+                and the spirit of royalty still lingers</p>
+              <div class="d-flex justify-content-center">
+                <a href="/jaipur"><button type="button" class="btn btn-info  m-1">Book</button></a>
+                <a href="/jaipur"><button type="button" class="btn btn-info  m-1">Details</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://northbengaltourism.com/images/holiday/756426/828x466_yumthangvalley.webp" alt="Sikkim"
+              class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">Sikkim</h2>
+              <h5 class="card-subtitle mb-2 text-muted">6 days 5 night</h5>
+
+              <p class="card-text">One of the most beautiful places in India, Sikkim is a glittering gem of the
+                North-East Himalayas. </p>
+              <div class="d-flex justify-content-center">
+                <a href="/sikkim"><button type="button" class="btn btn-info  m-1">Book</button></a>
+                <a href="/sikkim"><button type="button" class="btn btn-info  m-1">Details</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://kashmirobserver.net/wp-content/uploads/2022/08/Lavender-plants_-13.jpg" alt="Kerala"
+              class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">Kashmir</h2>
+              <h5 class="card-subtitle mb-2 text-muted">5 days 4 night</h5>
+              <p class="card-text">Kashmir: Where mountains touch the sky, and beauty knows no bounds..</p>
+              <div class="d-flex justify-content-center">
+                <a href="/kashmir"><button type="button" class="btn btn-info  m-1">Book</button></a>
+                <a href="/kashmir"><button type="button" class="btn btn-info  m-1">Details</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://www.letsroam.com/explorer/wp-content/uploads/sites/10/2022/06/best-beaches-in-the-world.jpg"
+              alt="Kerala" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">Goa</h2>
+              <h5 class="card-subtitle mb-2 text-muted">5 days </h5>
+              <p class="card-text">Find your rhythm at the ocean's beat. Experience the magic of the seaside.</p>
+              <div class="d-flex justify-content-center">
+                <a href="/goa"><button type="button" class="btn btn-info  m-1">Book</button></a>
+                <a href="/goa"><button type="button" class="btn btn-info  m-1">Details</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6th section  -->
+
+  <section class="travel-inspiration">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-4">
+            “Once a year, go someplace you've never been before.”
+          </h1>
+          <p class="lead">
+            Explore top tourist destinations to visit in India. From
+            mesmerising Hill stations to serene waterfalls, glorious
+            historical sites, pristine beaches
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="image-gallery row">
+            <div class="col-md-4 mb-3">
+              <img src="https://www.transindiatravels.com/wp-content/uploads/hauz-khas-delhi.jpg" alt="Hauz Khas Delhi"
+                class="img-fluid rounded" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <img
+                src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2016/10/141016_Delhi-Haat_Janakpuri.jpg?w=1200&h=628&fill=blur&fit=fill"
+                alt="Delhi Haat" class="img-fluid rounded" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/04/National-Rail-Museum.jpg"
+                alt="National Rail Museum" class="img-fluid rounded" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/09/Mussoorie1.jpg" alt="Mussoorie"
+                class="img-fluid rounded" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://dynamic.tourtravelworld.com/blog_images/andaman-nicobar-islands-20161018051558.jpg"
+                alt="Andaman and Nicobar Islands" class="img-fluid rounded" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://www.transindiatravels.com/wp-content/uploads/pangong-lake-ladakh.jpg" alt="Pangong Lake"
+                class="img-fluid rounded" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7th section  -->
+
+
+  <section class="text-gray-600 body-font ">
+    <div class="container p-1 mt-5 mb-3">
+      <div class="text-center mb-5">
+        <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">CUSTOMER REVIEW'S</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Use A Service Like Trustpilot To Collect Feedback
+        </p>
+      </div>
+
+      <div class="row mt-2 pb-4">
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8MiTBjwxRCBaV8Bm2ck7e6Rm02-2bMrTfQ&usqp=CAU"
+                alt="Customer 1" class="rounded-circle me-4" width="64" height="64">
+              <div>
+                <h2 class="h5">Holden Caulfield</h2>
+                <p class="text-muted">visit to MANALI!</p>
+              </div>
+            </div>
+            <p class="mt-3">Liked how you respond with things that matter when making a booking so far in
+              advance, booking received, deposit, paid, details of booking, reminder to pay and the
+              user-friendly app</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8th section  -->
+
+  <section class="text-gray-600 body-font relative">
+    <div class="container mt-4 p-5 text-center">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">“It feels good to be lost in the right direction”
+            </p>
+            <p>--what's your right direction--</p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- bootstrap js  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/your_fontawesome_kit.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+{% endblock body %}
+
+
+
+
+<!-- grid view -->

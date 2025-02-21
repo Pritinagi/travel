@@ -1,0 +1,152 @@
+.landmark-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.landmark-card img {
+    width: 100%;
+    height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.landmark-card:hover img {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.landmark-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.landmark-card:hover .overlay {
+    opacity: 1;
+}
+
+.landmark-card .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.landmark-card:hover .content {
+    opacity: 1;
+}
+
+.landmark-card .heading {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.landmark-card .price {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.landmark-card .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.landmark-card .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.landmark-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.landmark-card button:hover {
+    background-color: #3e8e41;
+}
+
+.container {
+    position: relative;
+  }
+
+  .image {
+    width: 100%; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    /* filter: blur(3px); */
+    opacity: 0.7;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black background */
+    color: white;
+    padding: 10px;
+  }
+
+  .card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+  }
+  .card{
+    min-height: 475px;
+  }
+
+
+.container {
+display: flex; 
+flex-wrap: wrap; 
+}
+
+.element {
+flex: 0 0 25%; /* Example: 25% width for each element */
+padding: 20px;
+background-color: #f0f0f0; 
+background-image: url('your-pattern.png'); 
+background-size: cover; /* Adjust as needed */
+background-position: center; 
+}
+
+
+
+/* sidebar  */
+.sidebar {
+position: fixed;
+top: 50%; /* Center vertically */
+left: 0;
+transform: translateY(-50%); /* Center vertically */
+background-color: #ffffffe8;
+padding: 10px;
+width: 50px; /* Adjust width as needed */
+}
+
+.social-icon {
+margin-bottom: 15px;
+}
+.question-card {
+position: relative;
+overflow: hidden;
+margin-bottom: 30px;
+}
+
+.Question-card img {
+width: 100%;
+height: 200px;
+transition: transform 0.3s ease;
+}

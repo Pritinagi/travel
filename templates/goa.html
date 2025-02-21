@@ -1,0 +1,378 @@
+{% extends "bfooter.html" %}
+{% block title %}Contact for {% endblock title %}
+{% block body %}
+{% comment %} This is body here all the detais of the page will be written {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FullCalendar CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.css" rel="stylesheet">
+  <!-- FontAwesome for the calendar icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .product-carousel {
+      position: sticky;
+      top: 0;
+    }
+
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .price-section .badge {
+      margin-left: 10px;
+      font-size: 0.9rem;
+    }
+
+    .btn-group button {
+      width: 48%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid py-5 mt-4">
+    <div class="row">
+      <!-- Left Section: Product Carousel -->
+      <div class="col-md-4 product-carousel">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.jpg?s=612x612&w=0&k=20&c=HvhbHZ8HH_lAjAAI2pmqL4mUipyyAwy31qp5jjKQTO0= "
+                alt="Product Image 2" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+
+              <img
+                src="https://media.istockphoto.com/id/511119416/photo/indian-landmark-gadi-sagar-in-rajasthan.jpg?s=612x612&w=0&k=20&c=dO7TbXh3sd6_QmgcF_nYi6ynyIAvPI5STavwzCDyWTI="
+                alt="Product Image 4" class="img-fluid">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="col-md-12 py-2  ">
+          <video width="400" height="540" autoplay loop muted class="img-fluid">
+            <source
+              src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+              type="video/mp4">
+          </video>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6 pe-1">
+            <img src="https://s3.india.com/wp-content/uploads/2024/05/Sisodia-Rani-Garden-1.jpg" alt="..."
+              class="img-fluid">
+          </div>
+          <div class="col-md-6 ps-1">
+            <img
+              src="https://static.toiimg.com/thumb/111461674/9-places-to-visit-in-Rajasthan-during-monsoon.jpg?width=1200&height=900"
+              alt="..." class="img-fluid">
+          </div>
+          <div class="col-md-12 py-2  ">
+            <video width="400" height="540" autoplay loop muted class="img-fluid">
+              <source
+                src="https://media.istockphoto.com/id/2164103170/video/woman-on-camel-in-the-desert-at-sunset.mp4?s=mp4-640x640-is&k=20&c=A_hv1rxOOqzwZBcUSTYlXJi95IzlEiRonEIViUpqHcM="
+                type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+
+        {% comment %} <div class="row mt-2">
+          <div class="col-md-6 pe-1">
+            <img src="https://s3.india.com/wp-content/uploads/2024/05/Sisodia-Rani-Garden-1.jpg"
+              alt="Additional Product Image 1" class="img-fluid">
+          </div>
+          <div class="col-md-6 ps-1">
+            <img
+              src="https://static.toiimg.com/thumb/111461674/9-places-to-visit-in-Rajasthan-during-monsoon.jpg?width=1200&height=900"
+              alt="Additional Product Image 2" class="img-fluid">
+          </div>
+          <div>
+            <video width="380" height="540" autoplay loop muted class="mt-0">
+              <source
+                src="https://media.istockphoto.com/id/2164103170/video/woman-on-camel-in-the-desert-at-sunset.mp4?s=mp4-640x640-is&k=20&c=A_hv1rxOOqzwZBcUSTYlXJi95IzlEiRonEIViUpqHcM="
+                type="video/mp4">
+
+            </video>
+          </div>
+        </div> {% endcomment %}
+
+
+
+
+      </div>
+
+      <!-- Right Section: Product Details -->
+      <div class="col-md-8">
+        <!-- Product Name -->
+        <h1 class="fw-bold">Goa... </h1>
+
+        <!-- Pricing -->
+        <div class="price-section my-3">
+          <p class="h4">
+            <del class="text-muted">$5999</del>
+            <span class="text-danger">$5777</span>
+            <span class="badge bg-success">Save 3.33%</span>
+          </p>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div class="d-flex my-3">
+          <button class="btn btn-primary me-2">Add to Bag</button>
+          <button class="btn btn-outline-danger">Wishlist</button>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="my-3">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="sizeSelect1" class="form-label">Select Duration </label>
+              <select id="sizeSelect1" class="form-select">
+                <option value="1">2 Days</option>
+                <option value="2">4 Days</option>
+                <option value="3">10 Days</option>
+                <option value="4">Custom</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="sizeSelect2" class="form-label">Select Dates</label>
+              <div>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#calendarModal">
+                  idhr calender add krne ka hai <i class="fas fa-calendar-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- new Selection -->
+        <div class="my-3">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="style" class="form-label">Select Journey Style </label>
+              <select id="style" class="form-select">
+                <option value="11">Adventure Trek</option>
+                <option value="22">Luxury Getaway</option>
+                {% comment %} <option value="3">City Explorer</option>
+                <option value="4">Adventure + Comfort</option>
+                <option value="5">Adventure + Comfort</option> {% endcomment %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Select </label>
+              <select id="" class="form-select">
+                <option value="111">Adventure Trek</option>
+                <option value="222">Luxury Getaway</option>
+              </select>
+
+            </div>
+          </div>
+
+
+
+
+          <!-- Seller Information -->
+          <div class="my-3">
+            <p><strong>Seller:</strong> Package for 1 person only</p>
+          </div>
+
+          <div class="row">
+            <div class="col my-3">
+              <h4 class="fw-bold">Traveling Details</h4>
+              <ul class="list-group">
+                <li class="list-group-item">Choose your preferred travel date when booking.
+                </li>
+                {% comment %} <li class="list-group-item">Only 2 days can be selected.</li> {% endcomment %}
+                <li class="list-group-item">Flexible options available for adjusting travel dates and duration.
+                </li>
+                <li class="list-group-item"> Extra charges apply for bookings longer than 2 days.
+                </li>
+                <li class="list-group-item">Prices may vary based on the selected travel date and duration.
+                </li>
+              </ul>
+
+            </div>
+            <!-- product descripion -->
+            <div class="col my-3">
+              <h4 class="fw-bold">Facilities Details</h4>
+              <ul class="list-group">
+                <li class="list-group-item">High-quality accommodations and services provided.
+                </li>
+                {% comment %} <li class="list-group-item">Only 2 days can be selected.</li> {% endcomment %}
+                <li class="list-group-item">The price for 2 days is ₹5999;
+                </li>
+                <li class="list-group-item"> Facilities include transportation, meals, and guided tours.
+                </li>
+                <li class="list-group-item"> Prices fluctuate depending on booking dates and travel duration</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <!-- Delivery Options -->
+            <div class="col my-3">
+              <h4 class="fw-bold">offers</h4>
+              <ul class="list-group">
+                <li class="list-group-item">Take advantage of limited-time special offers.
+                </li>
+                {% comment %} <li class="list-group-item">Only 2 days can be selected.</li> {% endcomment %}
+                <li class="list-group-item"> ₹5999 covers the cost for a 2-day stay.
+                </li>
+                <li class="list-group-item">Extra charges apply for additional days or peak season bookings.
+                </li>
+                <li class="list-group-item">Enjoy discounts and promotions by booking in advance.</li>
+              </ul>
+
+            </div>
+            <!-- other section can add here  -->
+
+            <div class="col my-3">
+              <h4 class="fw-bold">Reviews</h4>
+              <ul class="list-group">
+                <li class="list-group-item">Best investment</li>
+                <li class="list-group-item">Wonderful way to experience life!</li>
+                <li class="list-group-item">Value for money!</li>
+                <li class="list-group-item">Highly recommended!</li>
+                <li class="list-group-item">Lucky to travel!</li>
+                <!-- <li class="list-group-item">Lucky to travel</li>
+                <li class="list-group-item">wonderfull Way to expierence life with them</li> -->
+
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Notes -->
+          <div class="my-3">
+            <p><em>Enjoy! For other services, contact 1234567654.</em></p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- secion - 2 -->
+    <div class="mb-5 mt-3">
+
+      <h2 class="display-5 my-4 text-primary">Lets Explore the City</h2>
+      <div class="progress mt-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0"
+        aria-valuemax="100" style="height: 1px">
+        <div class="progress-bar" style="width: 37%"></div>
+      </div>
+
+      <div class="display-7">
+        Imagine a land where every sunrise casts golden hues over salt plains, and every street hums with the rhythm of
+        vibrant traditions. Welcome to Gujarat, a state that tells its story through kaleidoscopic festivals, ancient
+        marvels, and the indomitable spirit of its people. From the surreal white expanse of the Rann of Kutch to the
+        majestic Statue of Unity towering against the skyline, Gujarat is a tapestry woven with history, culture, and
+        natural splendor. Here, devotion finds its voice in the sacred halls of Dwarka, one of India’s oldest cities,
+        and joy takes flight during the International Kite Festival, painting the skies with a thousand colors. As the
+        cradle of Navratri, Gujarat pulses with the beats of garba and dandiya, welcoming visitors into a celebration of
+        life that lasts nine unforgettable nights. Savor the flavors of Gujarat in every bite of its iconic dishes—soft,
+        spongy dhokla, crispy thepla, and the hearty medley of undhiyu. And beyond its culinary delights lies its wild
+        heart: serene beaches, verdant wildlife sanctuaries teeming with rare species, and the ever-enchanting white
+        desert under a full moon’s glow. The warmth of its people, known for their hospitality and entrepreneurial zeal,
+        makes every visitor feel at home. Gujarat isn’t just a destination; it’s an invitation to experience life in all
+        its vibrancy. Come, explore this land of timeless charm, and let its magic linger in your heart long after you
+        leave.
+      </div>
+    </div>
+    <div class="container-fluid mt-3">
+
+      <div class="">
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="180" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+      </div>
+      <div class="">
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1335460032/video/highway-next-to-the-arabian-ocean.mp4?s=mp4-640x640-is&k=20&c=Ga3hWaEleXS_kpT0pX8Ygw48ddhv55X7RY3cCD0b1MI="
+            type="video/mp4">
+        </video>
+        <video width="200" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+        <video width="180" height="540" autoplay loop muted class="img-fluid">
+          <source
+            src="https://media.istockphoto.com/id/1058181752/video/beautiful-slow-motion-video-of-some-pigeons-flying-at-sunset-on-the-udaipur-city-palace.mp4?s=mp4-640x640-is&k=20&c=yPpAV-gDnrKPtu_KzfhWbiCyHwszBBZvsBzBdv5hznk="
+            type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+{% endblock body %}

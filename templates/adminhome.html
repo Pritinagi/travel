@@ -1,0 +1,400 @@
+{% extends "adminnav.html" %}
+
+{% block title %}Admin{% endblock title %}
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Pannel</title>
+  <!-- <link rel="stylesheet" href="static/css/adminhome.css"> -->
+  <link rel="stylesheet" href="static/css/try.css">
+  <link rel="stylesheet" href="static/css/try2.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+
+<body>
+
+  <!-- section 1 -->
+  <div class="container  display-4">
+    <b>
+      <p class="text-primary"> Admin Panel</p>
+    </b>
+  </div>
+
+
+  <!-- section 1.1 -->
+  <div class="container ">
+    <!-- sub div  -->
+    <div class="row ">
+      <div class="col red">
+        <p class="display-6">
+          User - Detail's
+        </p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis esse exercitationem nihil eum eos fuga.
+        Eius expedita, praesentium, quo quos, assumenda fugit tempora adipisci aliquam voluptate itaque nam repudiandae.
+      </div>
+      <div class="col red ">
+        <p class="display-6">
+          User - Booking's
+        </p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis esse exercitationem nihil eum eos fuga.
+        Eius expedita, praesentium, quo quos, assumenda fugit tempora adipisci aliquam voluptate itaque nam repudiandae.
+      </div>
+      <div class="col">
+        <!-- 4 divs  -->
+        <div class="row  ">
+          <div class="col detail1">
+            <p class="display-7">
+              Total User
+            </p>
+            <p class="display-5 px-5">
+              07
+            </p>
+          </div>
+          <div class="col detail1">
+            <p class="display-7">
+              Bookings
+            </p>
+            <p class="display-5 px-5">
+              02
+            </p>
+          </div>
+        </div>
+        <div class="row    ">
+          <div class="col detail1">
+            <p class="display-7">
+              Count
+            </p>
+            <p class="display-5 px-5">
+              10
+            </p>
+          </div>
+          <div class="col detail1">
+            <p class="display-7">
+              Admin
+            </p>
+            <p class="display-5 px-5">
+              01
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section for different actions -->
+  <div class="container mt-2">
+    <!-- divss in div -->
+
+    <div class="row">
+      <div class="col detail2">
+        Register New User
+      </div>
+      <div class="col detail2">
+        Login to new user
+      </div>
+      <div class="col detail2">
+        New User
+      </div>
+      <div class="col detail2">
+        New Offers to announce
+      </div>
+      <div class="col detail2">
+        CURD operations
+      </div>
+      <div class="col detail2">
+        Edit user details
+      </div>
+      <div class="col detail2">
+        edit package details
+      </div>
+      <div class="col detail2">
+        Login to new user
+      </div>
+      <div class="col detail2">
+        Register New User
+      </div>
+    </div>
+  </div>
+
+  <!-- product details -->
+  <div class="container productdet ">
+    <div class="container mt-2 row">
+      <div class="col red">
+        <h2 class="display-6">Add Product</h2>
+        <form action="" method="POST">
+          
+            {% csrf_token %}
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="productId" class="form-label"> Id</label>
+                    <input type="number" class="form-control" id="productId" name="p_id" required>
+                </div>
+                <div class="mb-3 col">
+                    <label for="productName" class="form-label"> Name</label>
+                    <input type="text" class="form-control" id="productName" name="name" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="form-label"> Price</label>
+                <input type="number" class="form-control" id="productPrice" name="price" min="0" required>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="duration" class="form-label">Duration</label>
+                    <input type="text" class="form-control" id="duration" name="duration" required>
+                </div>
+                <div class="mb-3 col">
+                    <label for="discount" class="form-label">Discount</label>
+                    <input type="text" class="form-control" id="discount" name="discount">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="displayMessage()" id='cilck' name="submit1">Submit</button>
+        </form>
+    </div>
+    
+      <div class="col red">
+        <h2 class="display-6">Update Product</h2>
+        <form action="/submit" method="POST">
+          <div class="row">
+            <div class="mb-3 col">
+              <label for="productId" class="form-label"> Id</label>
+              <input type="number" class="form-control" id="productId" name="product_id" required>
+            </div>
+            <div class="mb-3 col">
+              <label for="productName" class="form-label"> Name</label>
+              <input type="text" class="form-control" id="productName" name="product_name" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label"> Price</label>
+            <input type="number" class="form-control" id="productPrice" name="product_price" min="0" required>
+          </div>
+          <div class="row">
+            <div class="mb-3 col">
+              <label for="duration" class="form-label">Duration</label>
+              <input type="text" class="form-control" id="duration" name="duration" required>
+            </div>
+            <div class="mb-3 col">
+              <label for="discount" class="form-label">Discount</label>
+              <input type="text" class="form-control" id="discount" name="discount">
+            </div>
+            <!-- <div class="mb-3 col">
+            <label for="availability" class="form-label">Availability</label>
+            <input type="text" class="form-control" id="Availability" name="Availability" required>
+          </div> -->
+          </div>
+
+          <button type="Update" class="btn btn-primary" name="update1">Update</button>
+        </form>
+      </div>
+      <div class="col red">
+        <h2 class="display-6">Remove Product</h2>
+        <form action="/submit" method="POST">
+          <div class="mb-3 ">
+            <label for="productId" class="form-label"> Id</label>
+            <input type="number" class="form-control" id="productId" name="product_id" required>
+          </div>
+          <div class="mb-3 ">
+            <label for="productName" class="form-label"> Name</label>
+            <input type="text" class="form-control" id="productName" name="product_name" required>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mx-2" type="checkbox" value="" id="confirmationCheckbox" required>
+
+            <label class="form-check-label" for="confirmationCheckbox">
+              Are you sure?
+            </label>
+          </div>
+          <div>
+            <p class="display-7">**Once removed can't restore</p>
+          </div>
+          <div>
+            {% comment %} <button type="Delete" class="btn btn-primary" name="delete1" value="delete">Delete</button> {% endcomment %}
+            <input type="submit" class="btn btn-primary" method="post" name="delete1" value="Delete">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--list of products  -->
+  <div class="container productbox">
+    <div class="table table-responsive ">
+      <table class="table table-bordered">
+        <p class="display-5">
+          Our - Products
+        </p>
+        <thead>
+          <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Offer's</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for productlist in list4 %}
+          <tr>
+            <td> {{ productlist.id}}</td>
+            <td> {{ productlist.name}}</td>
+            <td> {{ productlist.price}}</td>
+            <td> {{ productlist.duration}} days</td>
+            <td> 00 %</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!--query of customers  -->
+  <div class="container querybox">
+    <div class="table table-responsive ">
+      <table class="table table-bordered">
+        <p class="display-5">
+          Customer Query
+        </p>
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Phone </th>
+            <th>Message</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for msg in list3 %}
+          <tr>
+            <td> {{ msg.firstname}} </td>
+            <td> {{ msg.phone}}</td>
+            <td> {{ msg.message}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- user and admin details  -->
+
+  <div class="fluid-container mt-2 section3">
+    <div class="row justify-content-center d-flex">
+      <!-- User Details Section -->
+      <div class="col-6 red">
+        <p class="display-5">
+          User details
+        </p>
+        <div class="container justify-content-center d-flex mt-1">
+          <div class="table-responsive ">
+            <table class="table table-bordered ">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User - Name</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in list1 %}
+                <tr>
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.fullname }}</td>
+                  <td>{{ user.email }}</td>
+                  <!-- Mask password or hide it entirely -->
+                  <td>{{ user.password }}</td>
+                  <td>
+                    <!-- Reusable Dropdown Component for User -->
+                    <!-- Reusable Dropdown Menu Component -->
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ href1 }}">Update</a></li>
+                        <li><a class="dropdown-item" href="{{ href2 }}">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Admin Details Section -->
+      <div class="col-5  red">
+        <p class="display-5">
+          Admin details
+        </p>
+        <div class="container justify-content-center d-flex mt-1">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User Name</th>
+                  <th>password</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for adminuser in list2 %}
+                <tr>
+                  <td>{{ adminuser.id }}</td>
+                  <td>{{ adminuser.username }}</td>
+                  <td>{{ adminuser.password}}</td>
+                  <td>
+                    <!-- Reusable Dropdown Component for User -->
+                    <!-- Reusable Dropdown Menu Component -->
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ href1 }}">Update</a></li>
+                        <li><a class="dropdown-item" href="{{ href2 }}">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function displayMessage() {
+            console.log("I am working");
+        }
+</script>
+
+</body>
+
+</html>
+
+
+{% endblock body %}

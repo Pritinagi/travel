@@ -1,0 +1,57 @@
+.container {
+    position: relative;
+  }
+
+  .image {
+    width: 100%; /* Adjust width as needed */
+    height: 450; /* Adjust height as needed */
+    /* filter: blur(3px); */
+    /* opacity: 0.7; */
+  }
+
+  .container {
+    display: flex; 
+    flex-wrap: wrap; 
+  }
+  
+  .element {
+    flex: 0 0 25%; /* Example: 25% width for each element */
+    padding: 20px;
+    background-color: #f0f0f0; 
+    background-image: url('your-pattern.png'); 
+    background-size: cover; /* Adjust as needed */
+    background-position: center; 
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black background */
+    color: white;
+    padding: 10px;
+  }
+  
+  /* sidebar  */
+  .sidebar {
+      position: fixed;
+      top: 50%; /* Center vertically */
+      left: 0;
+      transform: translateY(-50%); /* Center vertically */
+      background-color: #ffffffe8;
+      padding: 10px;
+      width: 50px; /* Adjust width as needed */
+  }
+  .links{
+    display: inline-flex;
+    
+  }
+  li{
+    align-items: center;
+    padding: 10px;
+  }
+.imageband :hover{
+  /* border: 2px solid #ff0000e8; */
+  opacity: 0.7px;
+}

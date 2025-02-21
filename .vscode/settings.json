@@ -1,0 +1,4 @@
+{
+    "css.autoValidation": "Never",
+    "django.i18n": true
+}

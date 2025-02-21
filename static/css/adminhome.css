@@ -1,0 +1,28 @@
+.detail1{
+    height: 6.24rem;
+    border: 1px black solid;
+    margin: 1px;
+    border-radius: 10px;
+    border-radius: 30px;
+}
+/* .detail{
+    border:2px solid black;
+    
+    
+} */
+/* .detail2{
+    border: 1px black solid;    
+    margin: 1px;
+} */
+.box {
+    border: 1px solid blue;
+}
+@media (max-width: 768px) {
+    .detail2 {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+.grid-item{
+    background-color: rgb(246, 127, 255);
+}

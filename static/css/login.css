@@ -1,0 +1,61 @@
+body {
+  background: linear-gradient(to right, #483D8B, #6495ED); /* Softer purple to light blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-text {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  width: 50%;
+  padding: 2rem;
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 350px;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border-color: #ced4da;
+  box-shadow: none;
+  transition: border-color 0.3s ease-in-out; 
+}
+
+.form-control:focus {
+  border-color: #663399; 
+}
+
+.btn-primary {
+  background-color: #663399;
+  border-color: #663399;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #5c2c7c; 
+}
+
+a {
+  color: #663399;
+  text-decoration: none;
+}

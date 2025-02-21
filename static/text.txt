@@ -1,0 +1,3 @@
+images, css , js files will be saved here
+only public files will be here 
+no sensitive files should be here

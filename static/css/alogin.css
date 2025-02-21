@@ -1,0 +1,36 @@
+.red
+{
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 5px;
+}
+
+.detail1{
+    height: 6.24rem;
+    border: 1px black solid;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: linear-gradient(to right, #443bf4, #6495ED); /* Softer purple to light blue gradient */
+    /* background-color: rgb(229, 215, 250); */
+
+}
+.detail2{
+    border: 1px black solid;    
+    margin: 1px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    /* background-color: rgb(238, 215, 250); */
+
+}
+.btn{
+    border-top-right-radius: 0;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+*{
+  background: linear-gradient(to right, #483D8B, #6495ED); /* Softer purple to light blue gradient */
+
+}
